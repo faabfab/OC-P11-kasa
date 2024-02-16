@@ -3,16 +3,16 @@ import '../style/Home.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-function Home() {
+function About() {
   return (
     <React.StrictMode>
       <Header />
       <main>
-        <h1>Home</h1>
+        <h1>A propos</h1>
       </main>
       <Footer />
     </React.StrictMode>
   )
 }
 
-export default Home
+export default About

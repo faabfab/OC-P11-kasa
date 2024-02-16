@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './style/index.css'
+import './style/index.scss'
 import Home from './pages/Home'
+import About from './pages/About'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 
@@ -11,9 +12,9 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
-    <Home />
   </React.StrictMode>
 )
 
