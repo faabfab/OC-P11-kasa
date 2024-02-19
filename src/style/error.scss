@@ -1,0 +1,38 @@
+@import 'variables';
+.error {
+  &_number,
+  &_p {
+    text-align: center;
+    color: $primary;
+  }
+  &_number {
+    margin-top: 50px;
+    font-size: 288px;
+    font-weight: bold;
+  }
+  &_p {
+    font-size: 36px;
+  }
+  &_link {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 139px;
+    margin-top: 139px;
+    & a {
+      color: black;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .error {
+    &_number {
+      font-size: 96px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    &_p {
+      font-size: 18px;
+    }
+  }
+}

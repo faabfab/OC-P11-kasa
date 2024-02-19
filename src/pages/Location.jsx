@@ -1,12 +1,12 @@
 import React from 'react'
 import '../style/Home.css'
 
-function Home() {
+function Location() {
   return (
     <React.StrictMode>
-      <h1>Home</h1>
+      <h1>Location</h1>
     </React.StrictMode>
   )
 }
 
-export default Home
+export default Location
