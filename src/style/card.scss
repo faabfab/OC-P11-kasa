@@ -1,0 +1,50 @@
+@import 'variables';
+
+.container {
+  padding: 40px;
+  padding-top: 0px;
+  background-color: $grey;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-top: 40px;
+  width: 340px;
+  height: 340px;
+  background-color: $primary;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 1%;
+  margin-right: 1%;
+  & img {
+    object-fit: cover;
+    object-position: center;
+    height: 340px;
+  }
+  & h2 {
+    color: white;
+    font-size: 18px;
+    position: relative;
+    top: -75px;
+    left: 20px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .container {
+    padding: 0px;
+    background-color: transparent;
+  }
+  .card {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    height: 225px;
+    & h2 {
+      top: -190px;
+    }
+  }
+}

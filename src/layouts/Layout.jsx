@@ -3,7 +3,7 @@ import { Outlet } from 'react-router'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-const LandingPageLayout = () => {
+function Layout() {
   return (
     <div>
       <Header />
@@ -15,4 +15,4 @@ const LandingPageLayout = () => {
   )
 }
 
-export default LandingPageLayout
+export default Layout

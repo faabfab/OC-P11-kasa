@@ -18,6 +18,10 @@ nav {
   }
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 @media (max-width: $breakpoint-mobile) {
   nav {
     margin-left: 20px;
