@@ -2,18 +2,22 @@ import React from 'react'
 import '../style/home.scss'
 import Card from '../components/Card'
 import logements from './../data/logements.json'
+import Banner from '../components/Banner'
 
 function Home() {
   return (
     <React.StrictMode>
-      <div className="home_header">
-        <div className="home_header_mask">
-          <h1>Chez vous, partout et ailleurs</h1>
-        </div>
-      </div>
+      <Banner />
       <div className="container">
         {logements.map((logement) => {
-          return <Card title={logement.title} cover={logement.cover} />
+          return (
+            <Card
+              title={logement.title}
+              cover={logement.cover}
+              id={logement.id}
+              key={logement.id}
+            />
+          )
         })}
       </div>
     </React.StrictMode>

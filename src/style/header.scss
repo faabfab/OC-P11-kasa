@@ -18,8 +18,11 @@ nav {
   }
 }
 
-.underline {
+.underlined {
   text-decoration: underline;
+}
+.not-underlined {
+  text-decoration: none;
 }
 
 @media (max-width: $breakpoint-mobile) {
