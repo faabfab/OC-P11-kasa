@@ -1,6 +1,58 @@
 @import 'variables';
 
-h1 {
-  color: $primary;
-  font-weight: 500;
+.accommodation {
+  &_infos,
+  &_infos2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_infos {
+    & h1 {
+      color: $primary;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    & p {
+      margin-top: 5px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &_host {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      & h3 {
+        color: $primary;
+        font-weight: 500;
+        font-size: 18px;
+        padding-right: 10px;
+      }
+      & img {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+      }
+    }
+  }
+  &_infos2 {
+    & ul {
+      padding: 0px;
+      & li {
+        display: inline;
+        text-align: center;
+        background-color: $primary;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-right: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        height: 25px;
+        border-radius: 10px;
+      }
+    }
+    & svg {
+      padding-left: 5px;
+    }
+  }
 }
