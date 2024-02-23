@@ -1,0 +1,19 @@
+@import 'variables';
+
+.dropdown {
+  height: 52px;
+  background-color: $primary;
+  border-radius: 10px;
+  width: 47%;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  & div {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

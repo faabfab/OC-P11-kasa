@@ -3,19 +3,18 @@ import { useParams } from 'react-router-dom'
 import logements from '../data/logements.json'
 import Slider from '../components/Slider'
 import './../style/accommodation.scss'
+import Dropdown from '../components/Dropdown'
 
 function Accommodation() {
   const { id } = useParams()
   const logement = logements.find((element) => element.id === id)
-  // const starFill = '#E3E3E3'
-
-  console.log(Number(logement.rating))
 
   function starRating(num) {
     let content = []
     for (let i = 0; i < num; i++) {
       content.push(
         <svg
+          key={i}
           width="25"
           height="24"
           viewBox="0 0 25 24"
@@ -31,6 +30,7 @@ function Accommodation() {
       for (let i = 0; i < reste; i++) {
         content.push(
           <svg
+            key={num + i}
             width="25"
             height="24"
             viewBox="0 0 25 24"
@@ -62,11 +62,15 @@ function Accommodation() {
         <div>
           <ul>
             {logement.tags.map((tag) => {
-              return <li>{tag}</li>
+              return <li key={tag}>{tag}</li>
             })}
           </ul>
         </div>
         <div>{starRating(logement.rating)}</div>
+      </div>
+      <div className="accommodation_infos3">
+        <Dropdown dropdownName="Description" />
+        <Dropdown dropdownName="Équipements" />
       </div>
     </React.StrictMode>
   )

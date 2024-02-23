@@ -2,7 +2,8 @@
 
 .accommodation {
   &_infos,
-  &_infos2 {
+  &_infos2,
+  &_infos3 {
     display: flex;
     justify-content: space-between;
   }
@@ -37,17 +38,20 @@
   &_infos2 {
     & ul {
       padding: 0px;
+      margin-top: 0px;
+      height: 25px;
       & li {
         display: inline;
         text-align: center;
         background-color: $primary;
         padding-left: 30px;
         padding-right: 30px;
+        padding-top: 4px;
+        padding-bottom: 4px;
         margin-right: 10px;
         color: white;
         font-size: 14px;
         font-weight: bold;
-        height: 25px;
         border-radius: 10px;
       }
     }
