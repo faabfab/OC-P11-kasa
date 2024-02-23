@@ -1,23 +1,27 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/kasa.png'
 import '../style/header.scss'
-import { useState } from 'react'
 
 function Header() {
-  const [style, setStyle] = useState('underlined')
-  const [style2, setStyle2] = useState('not-underlined')
+  const location = useLocation()
+  const { pathname } = location
 
-  console.log(typeof style)
+  let style = ''
+  let style2 = ''
+  switch (pathname) {
+    case '/':
+      style = 'underlined'
+      style2 = 'not-underlined'
+      break
+    case '/about':
+      style = 'not-underlined'
+      style2 = 'underlined'
+      break
 
-  const changeStyle = () => {
-    if (style === 'underlined' && style2 === 'not-underlined') {
-      setStyle('not-underlined')
-      setStyle2('underlined')
-    }
-    if (style === 'not-underlined' && style2 === 'underlined') {
-      setStyle('underlined')
-      setStyle2('not-underlined')
-    }
+    default:
+      style = 'not-underlined'
+      style2 = 'not-underlined'
+      break
   }
 
   return (
@@ -25,12 +29,12 @@ function Header() {
       <img src={logo} alt="logo kasa" />
       <ul>
         <li>
-          <Link to="/" className={style} onClick={changeStyle}>
+          <Link to="/" className={style}>
             Accueil
           </Link>
         </li>
         <li>
-          <Link to="/about" className={style2} onClick={changeStyle}>
+          <Link to="/about" className={style2}>
             A propos
           </Link>
         </li>

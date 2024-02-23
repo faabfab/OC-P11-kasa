@@ -4,7 +4,7 @@ import Layout from './layouts/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Error from './pages/Error'
-import Location from './pages/Location'
+import Accommodation from './pages/Accommodation'
 
 const router = createBrowserRouter([
   {
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/location/:id',
-        element: <Location />,
+        path: '/accommodation/:id',
+        element: <Accommodation />,
       },
       {
         path: '*',
@@ -31,4 +31,4 @@ const router = createBrowserRouter([
   },
 ])
 
-export const App = () => <RouterProvider router={router} />
+export const Router = () => <RouterProvider router={router} />
