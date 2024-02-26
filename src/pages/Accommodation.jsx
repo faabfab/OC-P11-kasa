@@ -45,15 +45,6 @@ function Accommodation() {
     return content
   }
 
-  function equipementsList(list) {
-    let text = ''
-    list.forEach((equipment) => {
-      text = text + equipment + ' - '
-    })
-
-    return text
-  }
-
   return (
     <React.StrictMode>
       <Slider pictures={logement.pictures} title={logement.title} />
@@ -87,7 +78,14 @@ function Accommodation() {
         <div className="dropdown_container">
           <Dropdown
             dropdownName="Équipements"
-            dropdownText={equipementsList(logement.equipments)}
+            dropdownText={logement.equipments.map((equipement) => {
+              return (
+                <span key={logement.equipments.indexOf(equipement)}>
+                  {equipement}
+                  <br />
+                </span>
+              )
+            })}
           />
         </div>
       </div>
