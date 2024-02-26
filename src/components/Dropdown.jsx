@@ -1,13 +1,27 @@
 import './../style/dropdown.scss'
-import arrow from './../assets/arrow.png'
+import { useState } from 'react'
+import Arrow from './Arrow'
+import DropdownText from './DropdownText'
 
-function Dropdown({ dropdownName }) {
+function Dropdown({ dropdownName, dropdownText }) {
+  const [status, setStatus] = useState('close')
+
+  function dropdownEvent(id) {
+    if (status === 'close') {
+      setStatus('open')
+    }
+    if (status === 'open') {
+      setStatus('close')
+    }
+  }
+
   return (
     <div className="dropdown">
-      <div>{dropdownName}</div>
-      <div>
-        <img src={arrow} alt="Arrow" />
+      <div className="dropdown_button" onClick={dropdownEvent}>
+        <div>{dropdownName}</div>
+        <Arrow arrowState={status} />
       </div>
+      <DropdownText arrowState={status} dropdownText={dropdownText} />
     </div>
   )
 }

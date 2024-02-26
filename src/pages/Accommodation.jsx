@@ -45,6 +45,15 @@ function Accommodation() {
     return content
   }
 
+  function equipementsList(list) {
+    let text = ''
+    list.forEach((equipment) => {
+      text = text + equipment + ' - '
+    })
+
+    return text
+  }
+
   return (
     <React.StrictMode>
       <Slider pictures={logement.pictures} title={logement.title} />
@@ -69,8 +78,18 @@ function Accommodation() {
         <div>{starRating(logement.rating)}</div>
       </div>
       <div className="accommodation_infos3">
-        <Dropdown dropdownName="Description" />
-        <Dropdown dropdownName="Équipements" />
+        <div className="dropdown_container">
+          <Dropdown
+            dropdownName="Description"
+            dropdownText={logement.description}
+          />
+        </div>
+        <div className="dropdown_container">
+          <Dropdown
+            dropdownName="Équipements"
+            dropdownText={equipementsList(logement.equipments)}
+          />
+        </div>
       </div>
     </React.StrictMode>
   )

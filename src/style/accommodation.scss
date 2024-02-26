@@ -59,4 +59,14 @@
       padding-left: 5px;
     }
   }
+  &_infos3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    & .dropdown_container {
+      width: 47%;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
 }

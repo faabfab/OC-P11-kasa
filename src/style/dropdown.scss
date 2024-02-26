@@ -1,19 +1,58 @@
 @import 'variables';
 
 .dropdown {
-  height: 52px;
-  background-color: $primary;
-  border-radius: 10px;
-  width: 47%;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  & div {
-    margin-left: 10px;
-    margin-right: 10px;
+  flex-direction: column;
+  &_container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  &_button {
+    height: 52px;
+    background-color: $primary;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    & div {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  &_text {
+    padding-left: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+.open {
+  rotate: 180deg;
+}
+.close,
+.open {
+  transition-property: rotate;
+  transition-duration: 0.25s;
+}
+
+.text {
+  &_close {
+    //display: none;
+    opacity: 0;
+    // transform: translateY(-100px);
+    height: 0px;
+    margin-bottom: 0px;
+  }
+  &_open {
+    opacity: 1;
+    //display: block;
+    //transform: translateY(0px);
+  }
+  &_close,
+  &_open {
+    transition: height 2s, opacity 0.5s;
   }
 }

@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Banner() {
+function Banner({ text, picture }) {
+  const divStyle = {
+    backgroundImage: 'url(' + picture + ')',
+  }
+
   return (
     <React.StrictMode>
-      <div className="home_header">
+      <div className="home_header" style={divStyle}>
         <div className="home_header_mask">
-          <h1>Chez vous, partout et ailleurs</h1>
+          <h1>{text}</h1>
         </div>
       </div>
     </React.StrictMode>
