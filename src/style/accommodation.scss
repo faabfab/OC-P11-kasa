@@ -22,6 +22,7 @@
       display: flex;
       justify-content: flex-end;
       margin-top: 20px;
+      margin-bottom: 15px;
       & h3 {
         color: $primary;
         font-weight: 500;
@@ -33,6 +34,8 @@
         height: 64px;
         border-radius: 32px;
       }
+    }
+    & host-rating {
     }
   }
   &_infos2 {
@@ -67,6 +70,60 @@
       width: 47%;
       margin-left: 0px;
       margin-right: 0px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .slider {
+    margin-top: 30px;
+    height: 255px;
+  }
+  .accommodation {
+    &_infos {
+      flex-direction: column;
+      & h1 {
+        font-size: 18px;
+      }
+      & p {
+        font-size: 14px;
+      }
+      &_host {
+        align-items: center;
+        & h3 {
+          font-size: 12px;
+        }
+        & img {
+          width: 32px;
+          height: 32px;
+          border-radius: 16px;
+        }
+      }
+      &_host-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    &_infos2 {
+      & svg {
+        height: 13px;
+        width: 13px;
+      }
+      & ul {
+        height: 18px;
+        & li {
+          font-size: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+    &_infos3 {
+      flex-direction: column;
+      & .dropdown_container {
+        width: 100%;
+      }
     }
   }
 }

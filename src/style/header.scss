@@ -27,6 +27,7 @@ nav {
 
 @media (max-width: $breakpoint-mobile) {
   nav {
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 10px;
     & img {

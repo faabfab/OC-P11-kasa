@@ -1,12 +1,12 @@
 import './../style/dropdown.scss'
 import { useState } from 'react'
-import Arrow from './Arrow'
+import DropdownArrow from './DropdownArrow'
 import DropdownText from './DropdownText'
 
 function Dropdown({ dropdownName, dropdownText }) {
   const [status, setStatus] = useState('close')
 
-  function dropdownEvent(id) {
+  function dropdownEvent() {
     if (status === 'close') {
       setStatus('open')
     }
@@ -19,7 +19,7 @@ function Dropdown({ dropdownName, dropdownText }) {
     <div className="dropdown">
       <div className="dropdown_button" onClick={dropdownEvent}>
         <div>{dropdownName}</div>
-        <Arrow arrowState={status} />
+        <DropdownArrow arrowState={status} />
       </div>
       <DropdownText arrowState={status} dropdownText={dropdownText} />
     </div>

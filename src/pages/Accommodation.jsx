@@ -47,26 +47,32 @@ function Accommodation() {
 
   return (
     <React.StrictMode>
-      <Slider pictures={logement.pictures} title={logement.title} />
+      <Slider
+        pictures={logement.pictures}
+        title={logement.title}
+        pictureIndex="0"
+      />
       <div className="accommodation_infos">
         <div>
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
+          <div className="accommodation_infos2">
+            <ul>
+              {logement.tags.map((tag) => {
+                return <li key={tag}>{tag}</li>
+              })}
+            </ul>
+          </div>
         </div>
-        <div className="accommodation_infos_host">
-          <h3>{logement.host.name}</h3>
-          <img src={logement.host.picture} alt={logement.host.name} />
+        <div className="accommodation_infos_host-rating">
+          <div className="accommodation_infos_host">
+            <h3>{logement.host.name}</h3>
+            <img src={logement.host.picture} alt={logement.host.name} />
+          </div>
+          <div className="accommodation_infos2">
+            {starRating(logement.rating)}
+          </div>
         </div>
-      </div>
-      <div className="accommodation_infos2">
-        <div>
-          <ul>
-            {logement.tags.map((tag) => {
-              return <li key={tag}>{tag}</li>
-            })}
-          </ul>
-        </div>
-        <div>{starRating(logement.rating)}</div>
       </div>
       <div className="accommodation_infos3">
         <div className="dropdown_container">

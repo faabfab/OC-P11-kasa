@@ -54,8 +54,10 @@
     margin-top: 0px;
     margin-bottom: 25px;
     height: 225px;
-    & h2 {
-      top: -190px;
+    & a {
+      & h2 {
+        padding-top: 170px;
+      }
     }
   }
 }
