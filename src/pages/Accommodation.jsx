@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import logements from '../data/logements.json'
 import Slider from '../components/Slider'
 import './../style/accommodation.scss'
@@ -7,7 +7,12 @@ import Dropdown from '../components/Dropdown'
 
 function Accommodation() {
   const { id } = useParams()
+
   const logement = logements.find((element) => element.id === id)
+
+  if (!logement) {
+    return <Navigate to="/error" />
+  }
 
   function starRating(num) {
     let content = []

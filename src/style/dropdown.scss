@@ -27,6 +27,26 @@
   &_text {
     padding-left: 10px;
     margin-bottom: 40px;
+    &_close {
+      display: none;
+      opacity: 0;
+      height: 0px;
+      margin-bottom: 0px;
+      //transform: scale(0);
+    }
+    &_open {
+      display: block;
+      opacity: 1;
+      height: auto;
+      margin-bottom: 40px;
+      //transform: scale(1);
+    }
+    &_close,
+    &_open {
+      transition-property: height, opacity, height, margin-bottom;
+      transition-duration: 2s;
+      //, opacity 0.5s;
+    }
   }
 }
 
@@ -37,22 +57,6 @@
 .open {
   transition-property: rotate;
   transition-duration: 0.25s;
-}
-
-.text {
-  &_close {
-    display: none;
-    opacity: 0;
-    height: 0px;
-    margin-bottom: 0px;
-  }
-  &_open {
-    opacity: 1;
-  }
-  &_close,
-  &_open {
-    transition: height 2s, opacity 0.5s;
-  }
 }
 
 @media (max-width: $breakpoint-mobile) {
