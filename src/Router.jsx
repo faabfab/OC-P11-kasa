@@ -22,6 +22,7 @@ const router = createBrowserRouter([
       {
         path: '/accommodation/:id',
         element: <Accommodation />,
+        // if id n'est pas dans logements.json alors Error
       },
       {
         path: '*',

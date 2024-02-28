@@ -11,10 +11,8 @@ function Slider({ pictures, title, pictureIndex }) {
   function pictureBack() {
     if (indexSlider > 0) {
       setIndexSlider(indexSlider - 1)
-      console.log(indexSlider)
     } else {
       setIndexSlider(pictures.length - 1)
-      console.log(indexSlider)
     }
   }
 
@@ -24,7 +22,6 @@ function Slider({ pictures, title, pictureIndex }) {
     } else {
       setIndexSlider(indexSlider + 1)
     }
-    console.log(indexSlider)
   }
 
   return (
