@@ -4,6 +4,9 @@ import logements from '../data/logements.json'
 import Slider from '../components/Slider'
 import './../style/accommodation.scss'
 import Dropdown from '../components/Dropdown'
+import Tags from '../components/Tags'
+import Host from '../components/Host'
+import Rating from '../components/Rating'
 
 function Accommodation() {
   const { id } = useParams()
@@ -13,7 +16,7 @@ function Accommodation() {
   if (!logement) {
     return <Navigate to="/error" />
   }
-
+  /*
   function starRating(num) {
     let content = []
     for (let i = 0; i < num; i++) {
@@ -49,7 +52,7 @@ function Accommodation() {
     }
     return content
   }
-
+*/
   return (
     <React.StrictMode>
       <Slider
@@ -62,21 +65,12 @@ function Accommodation() {
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
           <div className="accommodation_infos2">
-            <ul>
-              {logement.tags.map((tag) => {
-                return <li key={tag}>{tag}</li>
-              })}
-            </ul>
+            <Tags tags={logement.tags} />
           </div>
         </div>
         <div className="accommodation_infos_host-rating">
-          <div className="accommodation_infos_host">
-            <h3>{logement.host.name}</h3>
-            <img src={logement.host.picture} alt={logement.host.name} />
-          </div>
-          <div className="accommodation_infos2">
-            {starRating(logement.rating)}
-          </div>
+          <Host name={logement.host.name} picture={logement.host.picture} />
+          <Rating rating={logement.rating} />
         </div>
       </div>
       <div className="accommodation_infos3">
