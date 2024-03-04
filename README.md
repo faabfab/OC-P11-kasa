@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# Refonte de l'interface du site Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Refonte graphique du front end du site Kasa de location d’appartements entre particuliers
 
-## Available Scripts
+## Pour commencer
 
-In the project directory, you can run:
+Installation du projet en local
 
-### `npm start`
+### Pré-requis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [![Node](https://img.shields.io/badge/Node-gray?style=flat-square&logo=nodedotjs&logoColor=339933&link=https://nodejs.org/en)](https://nodejs.org/en)
+- [![NPM](https://img.shields.io/badge/NPM-gray?style=flat-square&logo=npm&logoColor=CB3837&link=https://www.npmjs.com/)](https://www.npmjs.com/) ou [![Yarn](https://img.shields.io/badge/Yarn-gray?style=flat-square&logo=yarn&logoColor=2C8EBB&link=https://classic.yarnpkg.com/en/)](https://classic.yarnpkg.com/en/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+Cloner le dépot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/faabfab/OC-P11-kasa.git P11-kasa
+```
 
-### `npm run build`
+Installer les dépendances
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```nodejs
+cd P11-kasa
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Dossiers et fichiers installés
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```plaintext
+|   .eslintrc
+|   .gitignore
+|   .prettierrc
+|   netlify.toml
+|   package-lock.json
+|   package.json
+|   README.md
+|
++---build
+|   |   asset-manifest.json
+|
++---node_modules
+|
++---public
+|       favicon.ico
+|       index.html
+|       logo192.png
+|       logo512.png
+|       manifest.json
+|       robots.txt
+|
+\---src
+    |   App.test.js
+    |   index.js
+    |   netlify.toml
+    |   reportWebVitals.js
+    |   Router.jsx
+    |   setupTests.js
+    |
+    +---assets
+    |       about_header.png
+    |       arrow.png
+    |       arrow_back.png
+    |       arrow_forward.png
+    |       home_header.png
+    |       kasa.png
+    |       kasa_white.png
+    |       logo.svg
+    |       star.svg
+    |
+    +---components
+    |       Banner.jsx
+    |       Card.jsx
+    |       Dropdown.jsx
+    |       DropdownArrow.jsx
+    |       DropdownText.1.jsx
+    |       DropdownText.jsx
+    |       Footer.jsx
+    |       Header.jsx
+    |       Host.jsx
+    |       Rating.jsx
+    |       Slider.jsx
+    |       Tags.jsx
+    |
+    +---data
+    |   |   about.json
+    |   |   logements.json
+    |   |   React App.html
+    |   |
+    |   \---React App_files
+    |           accommodation-1-1.jpg
+    |           bundle.js.t‚l‚chargement
+    |           profile-picture-1.jpg
+    |
+    +---layouts
+    |       Layout.jsx
+    |
+    +---pages
+    |       About.jsx
+    |       Accommodation.jsx
+    |       Error.jsx
+    |       Home.jsx
+    |
+    \---style
+            accommodation.scss
+            card.scss
+            dropdown.scss
+            error.scss
+            footer.scss
+            header.scss
+            home.scss
+            index.scss
+            slider.scss
+            tags.scss
+            _variables.scss
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Démarrage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Lancer la commande
+`npm run start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ou
 
-## Learn More
+`yarn start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ouvrir le navigateur
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`http://localhost:3000/`
 
-### Code Splitting
+## Fabriqué avec
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-gray?style=flat-square&logo=visualstudiocode&logoColor=007ACC&link=https://code.visualstudio.com/)](https://code.visualstudio.com/) - Editeur de textes
+- [![React](https://img.shields.io/badge/React-gray?style=flat-square&logo=react&logoColor=61DAFB&link=https://fr.legacy.reactjs.org/)](https://fr.legacy.reactjs.org/) - Bibliothèque JavaScript
+- [![Sass](https://img.shields.io/badge/Sass-gray?style=flat-square&logo=sass&logoColor=CC6699&link=https://sass-lang.com/)](https://sass-lang.com/) - Langage d'extension css
 
-### Analyzing the Bundle Size
+## Versions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Dernière version stable :** 0.1
 
-### Making a Progressive Web App
+## Auteurs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Esoobar Fabrice** _alias_ [@faabfab](https://github.com/faabfab)
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est sous licence `exemple: WTFTPL` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
