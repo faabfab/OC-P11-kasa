@@ -1,6 +1,6 @@
 # Redesign of the Kasa website interface
 
-RGraphic redesign of the front end of the Kasa website for renting flats between individuals
+Graphic redesign of the front end of the Kasa website for renting flats between individuals
 
 ## Getting started
 
