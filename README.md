@@ -1,32 +1,32 @@
-# Refonte de l'interface du site Kasa
+# Redesign of the Kasa website interface
 
-Refonte graphique du front end du site Kasa de location d’appartements entre particuliers
+RGraphic redesign of the front end of the Kasa website for renting flats between individuals
 
-## Pour commencer
+## Getting started
 
-Installation du projet en local
+Local installation of the project
 
-### Pré-requis
+### Requirements
 
 - [![Node](https://img.shields.io/badge/Node-gray?style=flat-square&logo=nodedotjs&logoColor=339933&link=https://nodejs.org/en)](https://nodejs.org/en)
 - [![NPM](https://img.shields.io/badge/NPM-gray?style=flat-square&logo=npm&logoColor=CB3837&link=https://www.npmjs.com/)](https://www.npmjs.com/) ou [![Yarn](https://img.shields.io/badge/Yarn-gray?style=flat-square&logo=yarn&logoColor=2C8EBB&link=https://classic.yarnpkg.com/en/)](https://classic.yarnpkg.com/en/)
 
 ### Installation
 
-Cloner le dépot
+Clone the repository
 
 ```
 git clone https://github.com/faabfab/OC-P11-kasa.git P11-kasa
 ```
 
-Installer les dépendances
+Install dependencies
 
 ```nodejs
 cd P11-kasa
 npm install
 ```
 
-Dossiers et fichiers installés
+Folders and files installed
 
 ```plaintext
 |   .eslintrc
@@ -118,29 +118,30 @@ Dossiers et fichiers installés
 
 ```
 
-## Démarrage
+## Startup
 
-Lancer la commande
+Run the command
+
 `npm run start`
 
-ou
+or
 
 `yarn start`
 
-Ouvrir le navigateur
+Open the browser
 
 `http://localhost:3000/`
 
-## Fabriqué avec
+## Made with
 
-- [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-gray?style=flat-square&logo=visualstudiocode&logoColor=007ACC&link=https://code.visualstudio.com/)](https://code.visualstudio.com/) - Editeur de textes
-- [![React](https://img.shields.io/badge/React-gray?style=flat-square&logo=react&logoColor=61DAFB&link=https://fr.legacy.reactjs.org/)](https://fr.legacy.reactjs.org/) - Bibliothèque JavaScript
-- [![Sass](https://img.shields.io/badge/Sass-gray?style=flat-square&logo=sass&logoColor=CC6699&link=https://sass-lang.com/)](https://sass-lang.com/) - Langage d'extension css
+- [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-gray?style=flat-square&logo=visualstudiocode&logoColor=007ACC&link=https://code.visualstudio.com/)](https://code.visualstudio.com/) - Text editor
+- [![React](https://img.shields.io/badge/React-gray?style=flat-square&logo=react&logoColor=61DAFB&link=https://fr.legacy.reactjs.org/)](https://fr.legacy.reactjs.org/) - JavaScript library
+- [![Sass](https://img.shields.io/badge/Sass-gray?style=flat-square&logo=sass&logoColor=CC6699&link=https://sass-lang.com/)](https://sass-lang.com/) - css extension language
 
 ## Versions
 
-**Dernière version stable :** 0.1
+**Latest stable version :** 0.1
 
-## Auteurs
+## Author
 
-- **Esoobar Fabrice** _alias_ [@faabfab](https://github.com/faabfab)
+- **Escobar Fabrice** _alias_ [@faabfab](https://github.com/faabfab)
