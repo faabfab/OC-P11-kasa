@@ -27,11 +27,11 @@
 }
 
 .open {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 .close,
 .open {
-  transition-property: rotate;
+  transition-property: transform;
   transition-duration: 0.25s;
 }
 
