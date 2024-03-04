@@ -144,7 +144,3 @@ Ouvrir le navigateur
 ## Auteurs
 
 - **Esoobar Fabrice** _alias_ [@faabfab](https://github.com/faabfab)
-
-## License
-
-Ce projet est sous licence `exemple: WTFTPL` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
