@@ -8,6 +8,14 @@ function Slider({ pictures, title, pictureIndex }) {
 
   const [indexSlider, setIndexSlider] = useState(Number(pictureIndex))
 
+  if (picturesNumber === 1) {
+    return (
+      <div className="slider">
+        <img src={pictures[indexSlider]} alt={title} />
+      </div>
+    )
+  }
+
   function pictureBack() {
     if (indexSlider > 0) {
       setIndexSlider(indexSlider - 1)

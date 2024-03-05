@@ -9,6 +9,7 @@
     margin-right: 50px;
   }
   &_button {
+    z-index: 2;
     height: 52px;
     background-color: $primary;
     border-radius: 10px;
@@ -44,13 +45,15 @@
 .inner {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out 0.1s;
+  transition: max-height 0.3s ease-out 0.1s;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: -40px;
 }
 
 .wrapper.is-open .inner {
-  padding-bottom: 20px;
-  padding-top: 20px;
   max-height: 100%;
+  margin-top: 0px;
 }
 
 @media (max-width: $breakpoint-mobile) {
