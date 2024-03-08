@@ -26,7 +26,9 @@ function Header() {
 
   return (
     <nav>
-      <img src={logo} alt="logo kasa" />
+      <Link to="/">
+        <img src={logo} alt="logo kasa" />
+      </Link>
       <ul>
         <li>
           <Link to="/" className={style}>
